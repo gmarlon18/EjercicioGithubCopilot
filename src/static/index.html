@@ -8,41 +8,51 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-row">
+        <div></div>
+        <div class="lang-switcher" aria-label="Language selector">
+          <label for="language-select" id="language-label">Language</label>
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </div>
+      </div>
+      <h1 id="app-title">Mergington High School</h1>
+      <h2 id="page-subtitle">Extracurricular Activities</h2>
     </header>
 
     <main>
       <section id="activities-container">
-        <h3>Available Activities</h3>
+        <h3 id="activities-heading">Available Activities</h3>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
-          <p>Loading activities...</p>
+          <p id="loading-message">Loading activities...</p>
         </div>
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+        <h3 id="signup-heading">Sign Up for an Activity</h3>
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
+            <label id="email-label" for="email">Student Email:</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
           </div>
           <div class="form-group">
-            <label for="activity">Select Activity:</label>
+            <label id="activity-label" for="activity">Select Activity:</label>
             <select id="activity" required>
-              <option value="">-- Select an activity --</option>
+              <option id="activity-placeholder" value="">-- Select an activity --</option>
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button id="submit-button" type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2023 Mergington High School</p>
+      <p id="footer-text">&copy; 2023 Mergington High School</p>
     </footer>
 
     <script src="app.js"></script>
